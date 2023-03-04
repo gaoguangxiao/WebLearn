@@ -22,21 +22,55 @@
         }
 
         /* 绘制上三角 */
-.box2{
-    height: 0;
-    width: 0;
-    border: 20px ;
-}
+        .box2 {
+            height: 0px;
+            width: 0px;
 
+            border: 40px solid transparent;
+            border-bottom: 40px solid red;
+        }
+
+        .anlibg {
+            width: 100px;
+            height: 50px;
+            background-color: white;
+            line-height: 50px;
+            text-indent: 20px;
+        }
+
+        .anliTop {
+            height: 0px;
+            width: 0px;
+            display: inline-block;
+            border: 5px solid transparent;
+            border-top: 5px solid red;
+            position: relative;
+            top: 2.5px;
+        }
+
+        .anlibg:hover .anliTop{ 
+            top: -2.5px;
+            border: 5px solid transparent;
+            border-bottom: 5px solid red;
+        }
     </style>
 </head>
 
 <body>
     <p></p>
     <div>
-        <div class="box">导航</div>
+        <div class="box">
+
+        </div>
+
+        <div class="box2"></div>
+
+        <div class="anlibg">
+            导航
+            <span class="anliTop"></span>
+        </div>
     </div>
-    
+
 </body>
 
 </html>
