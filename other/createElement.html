@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>createElement</title>
+</head>
+<body>
+	<p>内容：<br>1、创建新的元素节点 createElement()。<br>
+		2、创建文本节点 createTextNode()
+	</p>
+	<button onclick="myfunction()">点我</button>
+	<script type="text/javascript">
+		function myfunction(e) {
+			// body...
+			var x = document.createElement("p");
+			var t = document.createTextNode("这是一个段落");
+
+			x.appendChild(t);
+			document.body.appendChild(x);
+		}
+	</script>
+
+</body>
+</html>

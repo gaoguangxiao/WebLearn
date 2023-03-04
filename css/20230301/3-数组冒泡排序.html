@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var arr = [1,4,56,78,9,5,2,46,8,85,3];
+
+        document.write("原始数据：<br/>")
+        for (let i = 0; i < arr.length; i++) {
+            var element = arr[i];
+            document.write(element+",");
+        }
+    
+        //实现冒泡排序 逐个比较 小的元素向前移动，大的元素向后移动
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[i]) {
+                    let tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                    console.log(arr);
+                }
+            }
+            console.log(arr);
+        }
+
+        document.write("<br/>冒泡排序之后:<br/>")
+        for (let i = 0; i < arr.length; i++) {
+            var element = arr[i];
+            document.write(element + ",");
+        }
+        
+
+
+    </script>
+</body>
+
+</html>

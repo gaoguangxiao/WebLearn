@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 声明为HTML文档，在 doctype.name输出为文档的类型 -->
+<head>
+	<meta charset="utf-8">
+	<title>baseURl</title>
+	
+	<style type="text/css">
+		.democlass{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h2>高广校</h2>
+	<p>内容：<br>
+	document.baseURL返回文档基础的url</p>
+	<p>问题：<br>1、baseURI不是baseURL。<br>2、createAttribute创建节点对象，并且.value赋值一种样式</p>
+	<p id="demo">该文档的基础url</p>
+	<button onclick="myfunction()">点我</button>
+	<script type="text/javascript">
+		function myfunction(e) {
+			// body...
+			document.getElementById('demo').innerHTML = document.baseURI;
+
+			var p1 = document.getElementsByTagName("H2")[0];
+
+			var att = document.createAttribute("class");
+			att.value = "democlass";
+			p1.setAttributeNode(att);
+
+			//返回文档类型对象
+			// document.write(document.doctype.name);
+
+			//返回文档的位置
+			// document.write(document.documentURI);
+
+			//返回文档的域名
+			document.write(document.domain);
+
+
+		}
+	</script>
+
+</body>
+</html>

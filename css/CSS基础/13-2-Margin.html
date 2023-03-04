@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background: red;
+            overflow: hidden;
+            /* float: left; */
+            /* border: 1px solid transparent; */
+            /* padding-top: 100px; */
+
+        }
+
+        .box2 {
+            margin-top: 120px;
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            /* float: left; */
+        }
+
+        /* 让子盒子 距离父盒子顶部100px间距 */
+        /* 1、父盒子增加 padding-top: 注意高度计算 
+        2、父盒子 增加 border 注意高度计算 transparent透明
+        3、给父/子盒子 增加浮动属性，也可以
+        4、给父盒子增加 overflow.hidden 不子组件产生影响
+        */
+    </style>
+</head>
+
+<body>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>querySelector
+</title>
+</head>
+
+
+<body>
+	<!-- 段落标签 -->
+	<p>
+		内容：<br>
+		1、querySelector根据类，id，获取元素对象<br>
+		2、getElementByTagName 根据tagname获取标签名的对象的集合
+	</p>
+	<p> 问题：<br>
+		1、问题一：乱码没有加 meta charset="utf-8"<br>
+		2、问题二：script标签写错<br \>
+		3、问题三：document.querySelector的"S"写为了小写<br \>
+		4、问题四：按钮的点击触发函数写错
+	</p>
+<h2>我是第一个文字</h2><br/>
+<h3>我是第一个文字</h3>
+<h4>我是第一个文字</h4>
+<h5>我是第一个文字</p2>
+<button onclick="updateColor()">点我</button>
+
+
+<script>
+
+function updateColor(){
+	document.querySelector("p2").style.backgroundColor = "red";
+}
+
+</script>
+</body>
+</html>
+
+

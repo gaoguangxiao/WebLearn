@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <div><input type="checkbox" id="checkAll">
+        全选
+        <hr>
+        <input type="checkbox" name="" id="check1">选项一 <br>
+        <input type="checkbox" name="" id="check1">选项二 <br>
+        <input type="checkbox" name="" id="check1">选项三 <br>
+        <input type="checkbox" name="" id="check1">选项四 <br>
+    </div>
+
+
+    <script>
+
+        //1、获取全选按钮选中框
+        var allBtn = document.querySelector("input");
+
+        var items = document.querySelectorAll("input:nth-child(n+2)");
+        // console.log(items);
+
+        allBtn.onclick = function () {
+            var type = allBtn.checked
+            items.forEach(element => {
+                element.checked = type
+            });
+            // allBtn.select = type
+            console.log("点击" + type);
+        }
+
+        items.forEach(element => {
+            element.onclick = function () {
+                // console.log("items");
+                allBtn.checked = isAllSelectd()
+            }
+        });
+
+        function isAllSelectd() {
+            var isA = true
+            console.log(items);
+            for (let i = 0; i < items.length; i++) {
+                const element = items[i];
+                if (element.checked == false) {
+                    isA = false;
+                    break;
+                }
+            }
+            return isA;
+        }
+    </script>
+</body>
+
+</html>

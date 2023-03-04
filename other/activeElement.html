@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<p>
+内容：<br>
+1、document.activeElement的用法，获取焦点的属性 <br>
+2、获取选中文本 从选中区域的 value.substrinf(.selecttionStrat,.selectionEnd)
+
+</p>>
+
+<p>Select some text from one of the Textareas below</p>
+<textarea name="text is name" id="textareaId" rows="4" cols="40">
+	This is Textarea Example One: 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor olestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
+</textarea>
+
+<br />
+Active Element Id: <span class="output" id="output-element"></span><br/>
+Selected Text: <span class="output" id="output-text"></span>
+
+
+<!-- <p id="demo">在吗</p> -->
+<script type="text/javascript">
+	document.getElementById('textareaId').addEventListener("mouseup",onMouseUp,false); //
+	// document.getElementById("ta-example-one").addEventListener("mouseup", onMouseUp, false);
+	// document.addEventListener("mousemove",onMouseUp);
+
+	function onMouseUp(argument) {
+		
+
+		var selectTextArea = document.activeElement;
+
+		var selection = selectTextArea.value.substring(selectTextArea.selectionStart,selectTextArea.selectionEnd);//选中的文字
+
+		document.getElementById("output-element").innerHTML = selectTextArea.name;//
+
+		document.getElementById("output-text").innerHTML = selection;
+		// body...
+		// document.getElementById("demo").innerHTML = Math.random();
+
+	}
+</script>
+
+
+</body>
+
+
+</html>

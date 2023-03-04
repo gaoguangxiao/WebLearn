@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 320px;
+            background-color: blue;
+            /* float: left; */
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .box .item {
+            width: 158px;
+            float: left;
+            background-color: blue;
+            text-align: center;
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .item:hover {
+            background-color: blueviolet;
+        }
+
+        .item ul{
+            text-align: center;
+            display: none;
+            list-style: none;
+            border: 1px solid blanchedalmond;
+        }
+
+        .item:hover ul{
+            display: block;
+        }
+
+        .item li:hover{
+            color: red;
+        }
+        /* 接触 理解 
+    某视图隐藏display【掌握】
+        hover的使用  【】掌握】
+        颜色、文本高度【精通】  */
+
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li class="item">视频教程
+            <ul >
+                <li class="row">全部视频教程</li>
+                <li class="row">HTML5视频教程</li>
+                <li class="row">Java教程</li>
+                <li class="row">Python教程</li>
+            </ul>
+        </li>
+        <li class="item">认证考试
+            <ul>
+                <li>教室资格</li>
+                <li>营养师</li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>测试
+</title>
+</head>
+
+
+<body>
+<p>内容：<br \> 
+1、文档添加事件，移除事件 <br \> 
+2、鼠标点击，滑动等事件 <br \> 
+3、随机数函数 <br \> 
+</p>
+
+<p>
+问题：<br \>
+1、innerHTML修改元素，不是样式修改，不需要 style，这样document.getElementById("demo").style.innerHTML写法错误 <br \>
+2、修改body背景颜色的语法错误，document.style.backgroundColor -> document.body.style.backgroundColor = "red" <br \>
+3、按钮点击事件 onclick = "method"写错 -> onclick="method()"
+</p>
+
+<p>随机数显示：</p>
+
+<p id="demo">测试追加</p>
+
+<button onclick="cancelEventListener()">取消响应事件</button>
+<script>
+
+document.addEventListener("click",function(){
+    upbackgroundColor();
+});
+
+document.addEventListener("mousemove",mouseMoveChangeCount);
+function mouseMoveChangeCount(){
+	document.getElementById("demo").innerHTML = Math.random();
+}
+
+function cancelEventListener(){
+	//警示框呈现
+	// alert("完成");
+	document.removeEventListener("mousemove",mouseMoveChangeCount);
+}
+
+function upbackgroundColor(){
+	document.body.style.backgroundColor = "red";
+}
+
+</script>
+	
+
+</body>
+</html>
+
+

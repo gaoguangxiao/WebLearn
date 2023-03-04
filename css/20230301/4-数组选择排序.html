@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [4, 1, 56, 78, 9, 5, 2, 46, 8, 85, 3];
+
+        document.write("原始数据：<br/>")
+        for (let i = 0; i < arr.length; i++) {
+            var element = arr[i];
+            document.write(element + ",");
+        }
+
+        //实现选择排序 关注索引， 找到最小元素的索引和外轮交换
+        for (let j = 0; j < arr.length - 1; j++) {
+            var minIndex = j;
+            for (let i = j + 1; i < arr.length; i++) {
+                if (arr[i] < arr[minIndex]) {
+                    minIndex = i;
+                }
+                // console.log(arr);
+            }
+            // console.log("最小索引" + minIndex);
+            let tmp = arr[j];
+            arr[j] = arr[minIndex];
+            arr[minIndex] = tmp;
+        }
+
+        document.write("<br/>选择排序之后:<br/>")
+        for (let i = 0; i < arr.length; i++) {
+            var element = arr[i];
+            document.write(element + ",");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <button id="button">修改</button>
+        <p>内容要被改变</p>
+    </div>
+
+    <script>
+
+        var p = document.querySelector("p");
+
+        var btn = document.querySelector("button");
+        console.log(p)
+        button.onclick = function () {
+            p.innerText = "新内容";
+           
+            btn.innerText = "修改之后"
+
+            // btn.style.color = #808080;
+        };
+
+        // 设置元素样式
+
+        // p.innerHTML 超文本修改
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>open</title>
+	<style type="text/css">
+		.myStyle{
+			color: red;
+			width: 200px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<p>内容:<br>
+	1、向指定事件添加事件句柄<br>
+	2、向列表添加元素节点<br>
+	3、改变元素的样式。<br>
+	4、向列表添加节点，节点来源于上一个列表，或者字符串。<br>
+    5、比较两个段落的位置‘
+    </p>
+
+    <p>问题：<br> 
+    1、
+    </p> 
+	<button id="demo">点我</button>
+	<ul id="Mylist"><li id="li_one">Coffer</li><li>cofa</li></ul>
+	<ul id="Mylist2"><li>gogo</li><li>uuli</li></ul>
+
+	
+	<p id="paragraph_one">第一段落</p>
+	<p id="paragraph_two">第二段落</p>
+
+	<p id="demoText" class="你好">改变颜色</p>
+	<script type="text/javascript">
+
+		document.getElementById('demo').addEventListener("click",myfunction);//向指定元素添加时间句柄
+
+		function myfunction(e) {
+
+			// var e = document.createElement("li");
+			// // var t = document.createTextNode("hello");
+			// var t = document.createTextNode(document.getElementById("demoText").className);//获取指定元素的类名
+
+			// e.appendChild(t);
+			// document.getElementById("Mylist").appendChild(e);
+			
+			// document.body.style.backgroundColor = "yellow";
+
+
+			//2、指定元素添加样式
+			// document.getElementById("demoText").classList.add("myStyle");//classList属性返回元素的类名，该属性只读属性，可以添加修改 CSS样式，add()/remove()css样式
+
+			//3、将Mylist2克隆到Mylist1中
+			/*
+			var node = document.getElementById("Mylist2").lastChild;
+			document.getElementById("Mylist").appendChild(node.cloneNode(true));
+			*/
+
+			//4、比较两个字符的位置 2前一个位置后面 4：前 8内 16外
+			/*
+			var p1 = document.getElementById("paragraph_one");
+			var p2 = document.getElementById("paragraph_two");
+			var compareCount = p1.compareDocumentPosition(p2);
+			var s;
+			if (compareCount == 2) {
+			    s = "第一段落位于后";
+			} else if(compareCount == 4){
+				s = "第一段落位于前";
+			}else if (compareCount == 8){
+				s = "第一段落位于内";
+			}else if (compareCount == 16){
+				s = "第一段落位于外";
+			}else{
+				s = "未知";
+			}
+			document.getElementById("demoText").innerHTML = s;
+			*/
+
+
+		
+		}
+	</script>
+
+</body>
+</html>

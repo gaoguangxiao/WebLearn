@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>open</title>
+</head>
+<body>
+	<p>内容：<br>1、open：打开一个输出流来收集 document.write或document.writeln()方法输出的内容<br>
+		<hr> 下划线标签
+		2、调用open()打开新文档并用.write写进新的内容，需要用.close()关闭文档<br>
+	    3、.open("text/html","replace")前面参数默认是text，后面参数可选</p>
+
+	<button onclick="myfunction()">点我</button>
+	<p id="demo">替换的文本</p>
+	<script type="text/javascript">
+		function myfunction(e) {
+			// body...
+			// document.body.style.backgroundColor = "yellow";
+
+			//新窗口打开文档
+			// var w =	window.open()
+			// w.document.open("text/html");
+			// var txt="<!DOCTYPE html><html><body>学习 HTML DOM 很有趣!</body></html>";
+			// w.document.write(txt);
+			// w.document.close()
+
+            //当前窗口打开文档
+			var	w = document.open("text/html");
+			var txt="<!DOCTYPE html><html><body>学习 HTML DOM 很有趣!</body></html>";
+			w.write(txt);
+			w.close()
+		}
+	</script>
+
+</body>
+</html>

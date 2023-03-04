@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>open</title>
+</head>
+<body>
+<p>ECMAJavaScript </p>
+	<button onclick="myfunction()">点我</button>
+	<script type="text/javascript">
+		// {
+		// 	let a = 5; //lei命令所在代码块内有效，在外面调用就会报错
+		// 	var b = 10;
+		// }
+		// console.log(12);
+
+
+		// var a = [];
+		// for (var i = 0; i < 10; i++) {
+		//   a[i] = function () {
+		//     console.log(i);
+		//   };
+		// }
+		// a[6]();
+		//暂时性死区，let先声明变量，才可以使用，否则导致 refrence报错
+		function bar(x = y, y = 2) {
+		  return [x, y];
+		}
+
+			bar();
+
+
+
+
+		// document.write(a);
+
+		function myfunction(e) {
+			// body...
+			// document.body.style.backgroundColor = "yellow";
+		
+		}
+	</script>
+
+</body>
+</html>

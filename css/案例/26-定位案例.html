@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 912px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: yellow;
+        }
+
+        .box {
+            width: 275px;
+            height: 275px;
+            border: 6px solid #cccccc;
+            /* background-color: #808080; */
+            position: relative;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .box .leftIcon {
+            width: 30px;
+            left: 7px;
+            bottom: 0;
+            position: absolute;
+        }
+
+        .box .s_star{
+            width: 30px;
+            left: 7px;
+            bottom: 0;
+            display: none;
+            position: absolute;
+        }
+
+        .box:hover .leftIcon {
+            display: none;
+        }
+        .box.box:hover .s_star {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+        <div class="box">
+            <img src="/res/s_bg.jpg" alt="">
+            <img class="leftIcon" src="/res/s_icon.png" alt="">
+            <img class="s_star" src="/res/s_star.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

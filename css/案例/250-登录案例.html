@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: yellow;
+            border: 1px solid #808080;
+            flex: 1;
+            flex-direction: column;
+            position:relative;
+        }
+
+        form label {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            /* width: 100%; */
+            height: 50px;
+            position: absolute;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            
+        }
+
+        /* form label input {  */
+/* margin-right: 10px; */
+         /* } */
+        form button {
+            flex: 1;
+            height: 40px;
+            width: 100%;
+            /* margin-bottom: 0px; */
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="loginbg">
+        <label>
+            用户名<input class="username" type="text">
+        </label> <br>
+        <!-- <label>
+            密码 <input class="password" type="text"></label> <br>
+
+        <button type="submit">登录</button> -->
+
+    </form>
+
+    <script>
+
+
+
+        var loginForm = document.querySelector("form");
+
+        var username = document.querySelector(".username");
+        var password = document.querySelector(".password");
+
+        console.log(password);
+
+        var loginBtn = document.querySelector(".loginBtn");
+
+        loginForm.onsubmit = function (e) {
+            console.log("点击登录")
+
+            // e.pr
+
+            var name = username.value;
+            var psw  = password.value;
+
+            console.log(name + psw)
+        }
+        // loginBtn.onclick = function () {
+
+        //     console.log("输入的账户" + account.value);
+
+            
+        // }
+
+
+    </script>
+</body>
+
+</html>
