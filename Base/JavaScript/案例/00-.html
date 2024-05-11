@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="btns">
+        <p v-if="item.VideoId-0" @click="study('video',item,0,item.class_type)">{{$t('homepage.prepare')}}</p>
+        <p v-if="item.prepare_pdf" @click="pdfShow(item.prepare_pdf,4,item.class_type)">{{$t('homepage.prepare_pdf')}}
+        </p>
+        <p v-if="item.H5Btn && item.preview_courseware == 1 && !item.prepare_pdf"
+            @click="study('class',item,4,item.class_type)">{{$t('homepage.prepare_pdf')}}</p>
+        <p v-if="item.learning_materials_pdf" @click="pdfShow(item.learning_materials_pdf,5,item.class_type)">
+            {{$t('homepage.materials')}}</p>
+        <!-- <p class="gray2" v-if="!item.room_id" @click="showTip()">{{$t('homepage.enter_classroom')}}</p > -->
+        <!-- <p class="gray2" v-if="!item.enterShow" @click="showTip()">{{$t('homepage.enter_classroom')}}</p > -->
+        <!-- <p v-if="item.enterShow" @click="enterRoom(item)">{{$t('homepage.enter_classroom')}}</p > -->
+        <!-- <p v-if="item.room_id" @click="enterRoom(item)">{{$t('homepage.enter_classroom')}}</p > -->
+        <p class="gray2" v-if="(item.class_time - item.now_time >= 1800) || (item.expire_time < item.now_time)"
+            @click="showTip()">{{$t('homepage.enter_classroom')}}</p>
+        <p v-if="(item.class_time - item.now_time <= 1800) && (item.expire_time > item.now_time)"
+            @click="enterRoom(item)">{{$t('homepage.enter_classroom')}}</p>
+        <p v-if="item.qxShow" class="gray" :class="item.qxStyle"
+            @click="showCancelTk(item.id,item.avatar,item.class_time,item.teacher_name,item.c_type,$event)">
+            {{$t('common.cancel')}}</p>
+    </div>
+
+</body>
+
+</html>

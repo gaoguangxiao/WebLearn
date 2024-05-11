@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        <audio id="local-audio" autoplay controls></audio>
+
+      <button id="showAudio" onclick="onOpenCamera">打开麦克风</button>
+    </div>
+
+    <p>通过getUserMedia()获取音频</p>
+
+    <!--  -->
+
+    <script>
+      const constraints = {
+        audio: true,
+        video: false,
+      };
+      showAudio.onclick = function () {
+
+        navigator.mediaDevices
+          .getUserMedia(constraints)
+          .then(handleSuccess)
+          .catch(handleError);
+      };
+
+      //处理打开麦克风成功
+      function handleSuccess(stream) {
+        console.log("打开麦克风成功");
+
+        const audio = document.querySelector("#local-audio");
+
+        audio.srcObject = stream;
+      }
+
+      //打开摄像头失败
+      function handleError(error) {
+        console.log(error);
+      }
+      
+    </script>
+  </body>
+</html>

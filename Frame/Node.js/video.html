@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <video id="local-video" autoplay playsinline></video>
+
+      <button id="showVideo" onclick="onOpenCamera">打开摄像头</button>
+    </div>
+
+    <p>通过getUserMedia()获取视频</p>
+
+    <!--  -->
+
+    <script>
+      const constraints = {
+        audio: true,
+        video: true,
+      };
+      showVideo.onclick = function () {
+        console.log("打开摄像头");
+
+        navigator.mediaDevices
+          .getUserMedia(constraints)
+          .then(handleSuccess)
+          .catch(handleError);
+      };
+
+      //处理打开摄像头成功
+      function handleSuccess(stream) {
+        console.log("打开摄像头成功");
+
+        const video = document.querySelector("#local-video");
+
+        video.srcObject = stream;
+      }
+
+      //打开摄像头失败
+      function handleError(error) {
+        console.log(error);
+      }
+      
+    </script>
+  </body>
+</html>

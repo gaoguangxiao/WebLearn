@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400">
+    此浏览器不支持canvas
+  </canvas>
+</body>
+</html>
+<script>
+
+  const ctx = document.getElementById('canvas')
+
+  const gl = ctx.getContext('webgl')
+  // 指定将要用来清空绘图区的颜色  清空颜色缓存
+  // gl.clearColor(r,g,b,a) 指定清空 <canvas> 的颜⾊，接收四个参数（取值区间为 0.0~1.0）
+  gl.clearColor(1.0,0.0,0.0,1.0) // red 1.0  green 0.0  blue 0.0 alpha 1.0
+  // 使用之前指定的颜色，清空绘图区
+  gl.clear(gl.COLOR_BUFFER_BIT)
+
+</script>

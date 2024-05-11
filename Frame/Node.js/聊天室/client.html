@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>WebSocket简易聊天</h1>
+
+    <div>
+      <input type="text" name="" id="sendMsg" />
+      <button id="submitBtn" type="submit">发送</button>
+    </div>
+
+    <script>
+      //建立ws
+    //   console.log("建立服务器");
+
+      var websocket = new WebSocket("ws://192.168.1.6:8010");
+      websocket.onopen = function () {
+        console.log("已经连接服务器");
+        document.getElementById("submitBtn").onclick = function () {
+            
+          var txt = document.getElementById("sendMsg").value;
+          console.log(txt);
+          if (txt) websocket.send(txt);
+        };
+      };
+
+      websocket.onclose = function () {
+        console.log("websocket close");
+      };
+
+      websocket.onmessage = function (e) {
+        var mes = JSON.parse(e.data);
+        showMessage(mes.data, mes.type);
+      };
+
+      function showMessage(str, type) {
+        var div = document.createElement("div");
+        div.innerHTML = str;
+        if (type == "enter") {
+          div.style.color = "blue";
+        } else if (type == "leave") {
+          div.style.color = "red";
+        } else {
+        }
+        document.body.appendChild(div);
+      }
+      submitBtn.onclick = function () {};
+    </script>
+  </body>
+</html>
