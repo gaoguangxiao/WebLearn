@@ -1,10 +1,8 @@
+import { useEffect, useState } from "react";
+// import axios
 
 function App() {
-  return (
-    <div className="App">
-      this is App
-    </div>
-  );
+  return <div>this is App</div>;
 }
 
 export default App;

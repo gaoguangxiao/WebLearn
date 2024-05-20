@@ -1,0 +1,42 @@
+{
+    "success": true,
+    "code": 200,
+    "msg": "请求成功",
+    "data": {
+        "phEnable": false,
+        "osWakeTime": 30000,
+        "iosVersion": {
+            "phVersion": "1.2.1",
+            "latest": "1.5.3",
+            "min": "1.3.2",
+            "downloadUrl": "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=6474597107",
+            "title": "升级提示",
+            "releaseNote": "1.【优化】UI界面优化\n2：【优化】解决了一些体验上的小问题。"
+        },
+        "manifest": {
+            "enableCache": true,
+            "paths": {
+                "cdnPath": "https://test.audio.risekid.cn",
+                "wwwPath": "https://qa.risekid.cn",
+                "resPath": "https://qa.risekid.cn",
+                "audPath": "https://test.audio.risekid.cn"
+            },
+            "initialUrl": "https://qa.risekid.cn/manifest/manifest-initial.json",
+            "initialManifest": "https://test.audio.risekid.cn/web/adventure/manifest/manifest-initial.275116e6.json",
+            "spineManifest": "https://test.audio.risekid.cn/web/adventure/manifest/manifest-spine.a0a0393c.json",
+            "staticManifest": "https://test.audio.risekid.cn/web/adventure/manifest/manifest-static.2d2a4830.json",
+            "contentManifest": "https://gateway-test.risekid.cn/wap/api/static/{type}/{item}"
+        },
+        "osUriWhiteList": [
+            "mailto:",
+            "tel:",
+            "sms:",
+            "weixin://",
+            "wechat://",
+            "alipay://",
+            "alipays://",
+            "https://itunes.apple.com",
+            "https://apps.apple.com"
+        ]
+    }
+}
