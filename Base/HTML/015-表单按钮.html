@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>015-表单按钮</title>
+  </head>
+  <body>
+    <script>
+      function handleClick() {
+        console.log("打印");
+      }
+    </script>
+
+    <!-- submit提交按钮【不写type也是提交】，重置按钮,重置表单区域的所有文本输入 -->
+
+    <form action="">
+      用户名:<input type="text" placeholder="请输入用户名" /><br />
+      密码：<input type="text" placeholder="请输入密码" /><br />
+
+      <button type="submit" onclick="{handleClick()}">按钮</button>
+
+      <button type="reset">重置</button>
+
+      <button type="button">普通按钮</button>
+    </form>
+  </body>
+</html>

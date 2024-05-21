@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>填入个人信息</title>
+  </head>
+
+  <body>
+    <!-- table嵌套tr，tr嵌套td/th
+    tab 表格
+    tr 行
+    td 表头单元格
+    th 内容单元格
+    tf 汇总信息，表尾
+
+    border，边框
+    bordercolor，边框颜色
+    
+
+    1、跨行合并，保留最上，rowspan（取值数字，表示合并的数量）
+    2、跨列合并，
+    保留最左最上
+    -->
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        >
+        <tr>
+          <th>姓名</th>
+          <th>语文</th>
+          <th>数学</th>
+          <th>总分</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>张三</th>
+          <th>99</th>
+          <th rowspan="2">100</th>
+          <th>199</th>
+        </tr>
+        <tr>
+          <th>李四</th>
+          <th>98</th>
+          <!-- <th>100</th> -->
+          <th>198</th>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th>总结</th>
+          <th colspan="3">全市第一</th>
+          <!-- <th>全市第一</th> -->
+          <!-- <th>全市第一</th> -->
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>富文本</title>
+  </head>
+  <body>
+    <!-- 可随意拖动大小，需要禁止 placeholder站稳-->
+    <textarea placeholder="请输入评论">12</textarea>
+
+    <br />
+    <!-- label某个标签的说明文本，仅仅包裹内容，不包裹表单控件 -->
+    <label>label标签</label>
+
+    <!-- 写法一：扩大单选框的点击范围 -->
+    男女
+    <input type="radio" name="isAgree" id="man" /><label for="man">男</label>
+    <input type="radio" name="isAgree" id="women" /><label for="women"
+      >女</label
+    >
+
+    <br />
+    <!-- 使用label属性直接包裹单选框 -->
+    男女
+    <label><input type="radio" name="isAgree" />男</label>
+    <label><input type="radio" name="isAgree" />女</label>
+  </body>
+</html>

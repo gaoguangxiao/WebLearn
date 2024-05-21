@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <!-- input标签的 type属性的值不同，则功能不同 
+    
+        text：文本框，输入单行文本
+        password:密码框
+        checkbox：多选框
+radio：单选框
+    -->
+    <!-- <form action="/request-demo/demo4" method="post"> -->
+
+    <h3>输入框</h3>
+    文本框：<input type="text" placeholder="占位文本" name="username" /><br />
+    密码框：<input
+      type="password"
+      placeholder="占位密码"
+      name="password"
+    /><br />
+
+    <h3>多选框</h3>
+    <!-- checked 默认选中 -->
+    兴趣爱好
+    <input type="checkbox" name="hobby" />游泳
+    <input type="checkbox" name="hobby" checked />爬山 <br />
+    <br />
+
+    <h3>单选框</h3>
+    <!-- 单选框 增加name，放于一组 checked:默认选择-->
+    同意政策
+    <input type="radio" name="isAgree" />同意
+    <input type="radio" name="isAgree" checked />不同意<br />
+    <br />
+
+    <h3>上传文件</h3>
+    <!-- 默认单选 multiple 可多选文件-->
+    <input type="file" multiple />
+    <br />
+
+    
+    <input type="submit" />
+    <!-- </form> -->
+  </body>
+</html>
