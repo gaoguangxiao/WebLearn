@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .p1 {
+        /* 字体大小 */
+        font-size: 11px;
+
+        /* 字体颜色 
+        颜色英文单词
+        rgb：表示红绿蓝三原色 取值 0 - 255
+        十六进制
+        */
+        /* color: rgb(221, 255, 200); */
+        /* color: #0f0f0f; */
+        color: rgb(red, green, blue);
+      }
+
+      /* 字体属性 大小 粗细 倾斜 */
+      .p2 {
+        /* 字体大小 */
+        font-size: 15px;
+
+        /* 字体颜色 */
+        color: #2b7bb0;
+
+        /* 字体名字： */
+        font-family: 细明体, 微软雅黑, 宋体;
+        /* 
+        100 lighter 细
+        400 nomal 正常
+        700 bold 加粗
+        900 
+        */
+        font-weight: lighter;
+
+        /* 字体样式：是否倾斜 em、i
+        italic 倾斜
+        normal 正常
+        */
+        font-style: normal;
+      }
+
+      .p3 {
+        font-size: 15px;
+
+        /* 对齐方式 左中右 */
+        text-align: left;
+
+        /* 背景 */
+        background-color: yellow;
+
+        /* 盒子高度 */
+        height: 140px;
+
+        /* white-space: 0px; */
+
+        /* 行高 【上下间距 + 文本高度】
+         纯数字 为字体大小倍数
+         带px为 距离
+         */
+        line-height: 20px;
+
+        /* 字体间距 */
+        letter-spacing: 1px;
+
+        /* 文本缩进 
+        1em：数字+em（1em当前标签的字号大小。2em两个字的大小）
+        */
+        /* text-indent: 2em; */
+        text-indent: 20px;
+      }
+
+      .p4 {
+        /* 复合属性，属性的简写方式，一个属性对应多个值的写法，各个属性值之间用空格隔开
+        
+        是否倾斜 是否加粗 字号/行高（必须按照顺序）
+        */
+        /* font: italic 700 20px/30px 宋体; */
+
+        font: italic 20px/30px 宋体;
+
+        /* 文本修饰线 
+        none:无
+        overline：上划线
+        underline：下划线
+        line-through:删除线
+        */
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="p1">
+      现在的父母对于孩子的 教育问题是从多方面入 手的，不仅是从学习上，
+      还有自身素质以及三观的养成等等，但家长有时候也很难料到，可能一件小事给孩子
+      带来的影响都是非常大的。
+    </p>
+
+    <p class="p2">
+      现在的父母对于孩子的 教育问题是从多方面入手的，不仅是从学习上，
+      还有自身素质以及三观的养成等等，但家长有时候也很难料到，可能一件小事给孩子
+      带来的影响都是非常大的。
+    </p>
+
+    <p class="p3">
+      现在的父母对于孩子的
+      教育问题是从多方面入手的，不仅是从学习上，还有自身素质以及三观的养成等等，但家长有时候也很难料到，可能一件小事给孩子
+      带来的影响都是非常大的。
+    </p>
+
+    <p class="p4">
+      现在的父母对于孩子的
+      教育问题是从多方面入手的，不仅是从学习上，还有自身素质以及三观的养成等等，但家长有时候也很难料到，可能一件小事给孩子
+      带来的影响都是非常大的。
+    </p>
+  </body>
+</html>

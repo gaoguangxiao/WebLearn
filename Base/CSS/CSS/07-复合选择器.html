@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-复合选择器</title>
+    <style>
+      /* div span {
+            color: red;
+        } */
+
+      /* div > span {
+        color: red;
+      } */
+
+      /* 并集选择器，将多组标签设置相同样式 */
+      /* div,
+      p,
+      span {
+        color: red;
+      } */
+
+      /* 交集选择器，标签选择器写于最前面 */
+      p.box {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        选择器
+
+        复合选择器：由两个或多个基础选择器，通过不同的方式组合而来；更准确、更高效的选择目标元素
+
+            后代选择器：选中某元素的后代元素。
+            写法：父选择器 子选择器（CSS属性），父子选择器之间用空格隔开
+
+            子代选择器：选择某元素的子代元素
+            写法：父选择器 > 子选择器 {CSS属性}，父子选择器用 > 隔开
+
+            并集选择器：选中多组标签设置相同的样式
+            写法：选择器,选择器2,{CSS属性}，选择器之间用,隔开
+
+            交集选择器：选中同时满足多个条件的元素
+            写法：选择器1选择器2{CSS属性} 选择器之间连写，中间没有任何符号
+    -->
+
+    <h3>后代选择器</h3>
+    <span>span 标签</span>
+    <div>
+      <span>这是div的儿子</span>
+      <p><span>这是div里面p中的span</span></p>
+    </div>
+
+    <h3>子代选择器</h3>
+    <div>
+      <span>儿子span</span>
+      <p><span>孙子span</span></p>
+    </div>
+
+    <h3>并集选择器</h3>
+    <div>div标签</div>
+    <p>p 标签</p>
+    <span>span 标签</span>
+
+    <h3>交集选择器1</h3>
+    <p class="box">这是带有类选择器的p标签</p>
+    <p>这是p标签</p>
+    <span class="box">这是span标签</span>
+  </body>
+</html>

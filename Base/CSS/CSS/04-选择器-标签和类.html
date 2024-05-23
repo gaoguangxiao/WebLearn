@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* div{
+             background-color: red; 
+        } */
+
+      /* 类选择器 */
+      .qianfeng {
+        /* 背景颜色 */
+        /* background-color: green; */
+
+        /* 字体颜色 */
+        color: rgb(0, 17, 255);
+      }
+
+      .qianfengSize {
+        font-size: 50px;
+      }
+
+      #updateFour {
+        color: black;
+        background-color: red;
+      }
+
+      /* 通配符选择器 */
+      * {
+        margin: 0;
+        /* color: red; */
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- 选择器，查找标签，设置样式
+
+        标签选择器：以标签名作为选择器，选中同名标签作为设置相同样式，如div、a、p、h
+
+        类选择器：定义类 -> .类名，标签添加class="类名"、class可以引用多个样式，并用空格隔开
+
+        id选择器：查找标签，差异化设置标签的显示效果，一般和js配合使用，很少用来设置css样式。定义 #类名，使用 id="类名"
+     
+        通配符选择器：查找界面所有标签，设置相同样式。开发初期，用于清除默认样式
+    -->
+
+    <h3>标签选择器</h3>
+    <div>1231333</div>
+
+    <br />
+    <h3>类选择器</h3>
+    <div class="qianfeng qianfengSize">类选择器</div>
+    <br />
+
+    <h3>id选择器</h3>
+    <div id="updateFour">改变id的样式</div>
+
+    <h3>通配符选择器</h3>
+    <p>p 标签</p>
+    <div>div标签</div>
+    <h1>h1标签</h1>
+  </body>
+</html>

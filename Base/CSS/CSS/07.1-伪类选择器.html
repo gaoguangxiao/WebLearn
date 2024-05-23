@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07.1-伪类选择器</title>
+
+    <style>
+      /* a:hover {
+        color: red;
+      } */
+
+      /* 访问前 */
+      a:link {
+        color:red;
+      }
+
+      /* 访问后 */
+      a:visited {
+        color: yellow;
+      }
+
+      /* 点击时 */
+      a:active {
+        color: blue;
+      }
+
+      .box:hover {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 伪类选择器：
+    伪类表示元素状态，选中元素的某个状态设置样式。
+    鼠标悬停状态：选择器:hover{CSS属性}
+
+
+    -->
+
+    <!-- a：超链接一共四个状态，
+    link: 访问前
+    visited:访问后【被点击后】
+    hover:鼠标悬停
+    avtivec：点击时 激活
+    -->
+    <a href="#">a 标签，测试伪类</a>
+
+    <!-- <a href="https://qa3.risekid.cn">阅读大冒险</a> -->
+
+    <div class="box">div标签</div>
+  </body>
+</html>
