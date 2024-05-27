@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5,
+      .box6 {
+        width: 200px;
+        height: 200px;
+      }
+
+      .box1 {
+        background: red;
+        margin-bottom: 100px;
+      }
+
+      .box2 {
+        margin-top: 100px;
+        background: yellow;
+      }
+
+      .box3 {
+        background: red;
+        margin-right: 100px;
+        /* margin-bottom: 100px; */
+        float: left;
+      }
+
+      .box4 {
+        background: yellow;
+        margin-left: 100px;
+        /* float: left; */
+      }
+
+      .box5 {
+        /* margin-top: 10px; */
+        background: red;
+        /* padding-top: 50px; */
+      }
+
+      .box6 {
+        /* margin-top: 10px; */
+        width: 100px;
+        height: 100px;
+        background: yellow;
+      }
+
+      /* 垂直方向 外边距取最大值 
+        水平方向 外边距合并
+        */
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="box1"></div> -->
+    <!-- <div class="box2"></div> -->
+    <!-- <div class="box3"></div> -->
+    <!-- <div class="box4"></div> -->
+
+    <div class="box5">
+      <div class="box6"></div>
+    </div>
+  </body>
+</html>

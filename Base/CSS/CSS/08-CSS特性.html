@@ -1,24 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>08-CSS特性</title>
 
     <style>
-
-        /* 继承性，子类可继承父类的 字体控制属性 */
-        body {
+      /* 继承性，子类可继承父类的 字体控制属性
+        
+        标签本身无具备属性可从父类继承
+        */
+      body {
             font-size: 30px;
         }
-    </style>
-</head>
-<body>
 
-    <div>div标签</div>
+      /* 层叠性 
+        相同属性会覆盖，后面CSS属性会覆盖之前的
+        不同属性会叠加，
+        */
+     /* div {
+        color: red;
+      } */
+
+      /* div {
+        color: #000;
+        font-size: 40px;
+      }  */
+
+      .box {
+        color: red;
+      }
+
+      #box1 {
+        color: yellow;
+        height: 100px;
+        width: 500px;
     
+      }
+      /* 优先级 
+      通配符选择器 < 标签选择器 < 类选择器 < id选择器 < 行内样式 < !important
+      */
+    </style>
+  </head>
+  <body>
+    <div>div标签</div>
     <p>p标签</p>
-
     <span>span标签</span>
-</body>
+
+    <!-- 快捷  Emmet缩写
+    类选择器：标签名.类名
+    -->
+   <div class="box"></div>
+
+   <div id="box1">类选择的Emmet写法</div>
+   
+   <!-- 同级标签 标签+标签 -->
+   <div>1123</div>
+   <p>123</p>
+
+   <!-- 父子标签 标签>标签-->
+   <div>
+    <p></p>
+   </div>
+
+   <!-- 多标签生成 span*4-->
+
+   <!-- 函内容标签 -->
+<div>你们好</div>
+  </body>
 </html>

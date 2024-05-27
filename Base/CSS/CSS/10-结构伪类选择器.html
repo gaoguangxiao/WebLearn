@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-结构伪类选择器</title>
+    <style>
+      /* 查找第一个E元素 */
+      /* li:first-child {
+        background-color: red;
+      } */
+
+      /* 查找第一个元素 第一个元素为1 */
+      /* li:nth-child(3) {
+        background-color: orange;
+      } */
+
+      /* 查找 公式
+      2n 偶数标签
+      2n+1 奇数标签
+      4/5n 某数的倍数
+      n+3  某数之后的
+        -n+3 某数之前
+      */
+      li:nth-child(-n + 4) {
+        background-color: yellow;
+      }
+
+      /* 查找最后一个元素 */
+      /* li:last-child {
+        background-color: green;
+      } */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>li 1</li>
+      <li>li 1</li>
+      <li>li 1</li>
+      <li>li 1</li>
+      <li>li 1</li>
+      <li>li 1</li>
+      <li>li 1</li>
+      <li>li 1</li>
+    </ul>
+  </body>
+</html>
