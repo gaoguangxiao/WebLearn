@@ -10,11 +10,14 @@ const useBridge = () => {
 
     var action_Str = JSON.stringify(message);
     console.log("----web call app---" + action_Str);
-    const bridge = window.nativeBridge;
-    if (bridge) {
-      bridge.postMessage(message);
-    } else {
-      console.log("无参数");
+    try {
+      // do something...
+      let bridge = window.nativeBridge
+      if (bridge) {
+        window.nativeBridge.postMessage(message)
+      }
+    } catch (e) {
+      console.error(e)
     }
   };
 

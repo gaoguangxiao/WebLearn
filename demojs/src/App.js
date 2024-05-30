@@ -16,16 +16,22 @@ function App() {
   }, []);
 
   const openView = () => {};
-  // const share = () => {
-  //   thirdBridge.openShare("text");
-  // };
 
   return (
-    <div className="App" style={{ backgroundColor: "#FFFFFF" }}>
+    <div className="App" style={{}}>
       <fieldset>
         <h3>RSViewBridge【视图】</h3>
         <button onClick={openView}>打开视图</button>
+
+        <h4>截屏</h4>
         <button onClick={viewBridge.snapshot}>截屏</button>
+        <button onClick={viewBridge.snapshotfHalf}>截屏含参数</button>
+
+        <h4>对话框</h4>
+        <button onClick={()=>viewBridge.openDialog(1)}>对话框一个按钮</button>
+        <button onClick={()=>viewBridge.openDialog(2)}>对话框二个按钮</button>
+        <button onClick={()=>viewBridge.openDialog(3)}>对话框三个按钮</button>
+        
         <h4>市场评分</h4>
         <button onClick={()=> viewBridge.marketRating('appInScore')}>市场评分</button>
         <button onClick={()=> viewBridge.marketRating('appInComment')}>应用内评论</button>
