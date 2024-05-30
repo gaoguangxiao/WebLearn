@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.3-外边距问题-合并现象</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-bottom: 50px;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin-top: 60px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 垂直排列的兄弟元素，上下marin合并，取maring中的较大值-->
+
+    <div class="box1">兄弟一</div>
+    <div class="box2">兄弟二</div>
+  </body>
+</html>
