@@ -52,7 +52,22 @@ const useViewBridge = () => {
     bridge.callApp("openDialog", params);
   };
 
-  return { marketRating, snapshot, snapshotfHalf, openDialog };
+  // adventure:///web?path=https%3A%2F%2Fwww.risekid.cn%2Fpolicy%2FuserProtocal.html 阅读大冒险跳转
+  const openView = () => {
+    var params = {
+      // url:"paipai:///web?path=https%3A%2F%2Fwww.risekid.cn%2Fpolicy%2FuserProtocal.html"
+      url: "alipays://platformapi/startapp?appId=2021003121605466&thirdPartSchema=Y&page=pages/cashier/cashier?p%3DH2024082010570700704573320%26s%3Dapp&bank_switch=Y",
+    };
+    bridge.callApp("openView", params);
+  };
+
+  const checkAppConfig =() => {
+    var params = {
+    };
+    bridge.callApp("checkAppConfig", params);
+  };
+
+  return { marketRating, snapshot, snapshotfHalf, openDialog , openView,checkAppConfig};
 };
 
 export default useViewBridge;

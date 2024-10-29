@@ -38,7 +38,16 @@ const useThirdBridge = () => {
     bridge.callApp("share", params);
   };
 
-  return {openShare};
+  const openApplePay = (productID) => {
+    var params = {
+      "payment":"appleIAP",
+      "orderNo":"1231",
+      "appleProductId":productID,
+    };
+    bridge.callApp("placeOrder", params);
+  }
+
+  return {openShare, openApplePay};
 };
 
 export default useThirdBridge

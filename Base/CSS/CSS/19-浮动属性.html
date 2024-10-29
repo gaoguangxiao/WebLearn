@@ -11,23 +11,33 @@
             height: 200px;
         }
         .red{
+            /* margin-left: 100px; */
             background-color: red;
+             /* 浮动属性：左 */
             float: left;
-            /* 浮动属性 */
+           
         }
         .green{
             background-color: green;
-            float: left;
-            /* width: 300px; */
-            /* height: 300px; */
+            float: right;
+
         }
         .yellow{
             background-color: yellow;
-            float: left;
+            /* float: right; */
+
+            width: 400px;
+            height: 400px;
         }
     </style>
 </head>
 <body>
+
+    <!-- 特点
+        1、顶对齐，具备行内块显示模式特点
+        2、具备浮动属性的标签会脱离标准流，不占位置
+-->
+    <!-- 浮动右，按照div添加顺序，由右向左依次排列 -->
     <div class="red"></div>
     <div class="green"></div>
     <div class="yellow"></div>
